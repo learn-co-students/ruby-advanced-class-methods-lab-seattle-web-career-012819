@@ -46,6 +46,8 @@ class Song
     self.all.sort_by {|w| w.name.downcase}
   end
 
+
+## THIS IS ALL FOR THE FILENAME CONVERSION FUNCTIONS
   def self.fixfile(raw)
     temp = raw.split(' - ')
     temp[1].chomp!('.mp3')
@@ -67,6 +69,9 @@ class Song
 
     new
   end
+
+  ## THIS IS ALL FOR THE FILENAME CONVERSION FUNCTIONS
+
 
   def self.destroy_all
     self.all.clear
