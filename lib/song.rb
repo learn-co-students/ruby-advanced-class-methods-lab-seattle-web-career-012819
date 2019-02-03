@@ -45,8 +45,10 @@ def self.alphabetical
 end
 
 def self.new_from_filename(name)
-  artist_n = name.split.first #split the first part of the string for name
-  song_name = name.split(' - ').last.chomp(".mp3") #retrive the song name without the format
+  file_name=[]
+  file_name = name
+  artist_n = file_name.split.first #split the first part of the string for name
+  song_name = file_name.split(' - ').last.chomp(".mp3") #retrive the song name without the format
   song = self.new_by_name(song_name)
   song.artist_name = artist_n
   song
